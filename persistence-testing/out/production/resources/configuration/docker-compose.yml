@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  mongo-db:
+    image: mongo:3.5
+    ports:
+      - "27017:27017"
+    volumes:
+      - /opt/mongoDb:/data/db
+    networks:
+      - intraHqNetwork
+
+  postgreSql:
+    image: postgres:10
+    ports:
+      - "5432:5432"
+    volumes:
+      - /opt/postgreSql:/var/lib/postgresql/data
+    networks:
+      - intraHqNetwork
+networks:
+  intraHqNetwork:

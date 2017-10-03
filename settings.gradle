@@ -1,0 +1,3 @@
+rootProject.name = 'intra-hq-backend'
+include 'persistence-testing'
+
